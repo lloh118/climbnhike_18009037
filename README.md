@@ -1,3 +1,3 @@
-phonegap-lifecycle-test
+Climb n hike app
 =======================
- A simple PhoneGap Build application that counts the occurances of application lifecycle events 
+ A simple PhoneGap Build application for climbers and hikers
