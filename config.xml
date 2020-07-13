@@ -16,6 +16,8 @@
     
     <icon src="icon.png" />
     
+    <!-- Splash loading screens-->
+    <splash src="splash.png" />
     
     
     
