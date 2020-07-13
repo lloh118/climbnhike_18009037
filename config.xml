@@ -13,8 +13,9 @@
     <description>
         A PhoneGap application giving Climbers and Hikers a host of virtual aids and tools.
     </description>
-    
-    <icon src="icon.png" />
+    <platform name="ios">
+        <icon src="icon.png" />
+    </platform>
     
     <!-- Splash loading screens-->
     <splash src="splash.png" />
