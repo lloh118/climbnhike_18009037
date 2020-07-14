@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
-
-<!--Change Widget -->
+<!-- widget container for all other elements -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "mob.app.dev.lifecycle"
+        id        = "com.18009037.climbnhike"
         version   = "1.0.0">
 
     <name>Climb n Hike</name>
@@ -13,6 +11,8 @@
     <description>
         A PhoneGap application giving Climbers and Hikers a host of virtual aids and tools.
     </description>
+	
+	<!-- app icons (IOS) -->
     <platform name="ios">
         <icon src="media/appIcons/icon/ios/icon-1024.png" width="1024" height="1024"/>
         <icon src="media/appIcons/icon/ios/icon-small.png" width="29" height="29"/>
@@ -33,7 +33,9 @@
         <icon src="media/appIcons/icon/ios/icon-76.png" width="76" height="76"/>
         <icon src="media/appIcons/icon/ios/icon-76@2x.png" width="152" height="152"/>
         <icon src="media/appIcons/icon/ios/icon-167.png" width="167" height="167"/>
-        <icon src="res/icon/ios/icon-83.5@2x.png" width="167" height="167"/>
+        <icon src="media/appIcons/icon/ios/icon-83.5@2x.png" width="167" height="167"/>
+
+        <!-- Splash loading screens-->
         <!--  Storyboard portrait  -->
         <splash src="media/appIcons/screen/ios/Default@2x~iphone~anyany.png"/>
         <splash src="media/appIcons/screen/ios/Default@2x~iphone~comany.png"/>
@@ -45,15 +47,29 @@
 
 
 
-    <author href="worcester.ac.uk" email="lloh1_18@uni.worc.ac.uk">
+    <author href="https://www.worcester.ac.uk" email="lloh1_18@uni.worc.ac.uk">
         18009037 - Student
     </author>
 
     <preference name="phonegap-version" value="cli-7.0.1" />
 	
-    <preference name="permissions"                value="none"/>   
+    <preference name="permissions"                value="none"/>  
 	
-	<access origin="*"/>
-   	<plugin name="cordova-plugin-whitelist" version="1" />
-	<plugin name="cordova-plugin-geolocation" spec="~4.0.2" />
+	<!-- plugins -->
+    <!-- allow navigation to any off app urls not just file links-->
+    <access origin="*"/>
+    <!-- plugin for off app navigation-->
+    <plugin name="cordova-plugin-whitelist" version="1" />
+
+    <!-- google maps plugin -->
+    <plugin name="plugin.google.maps.menusito" spec="1.2.5" source="pgb" />
+    <!-- plugin to access device location -->
+    <plugin name="cordova-plugin-geolocation" spec="~4.0.2" />
+    <!-- allows battery level notification in app -->
+    <plugin name="cordova-plugin-battery-status" spec="~2.0.3" />
+    <!-- network information plugin to return network strength -->
+    <plugin name="cordova-plugin-network-information" spec="~2.0.2" />
+    <!-- allows use of splash loading screens-->
+    <plugin name="cordova-plugin-splashscreen" spec="~5.0.4" />
+
 </widget>
