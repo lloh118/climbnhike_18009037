@@ -12,6 +12,7 @@ body {
 
 
 
+
 /* Div wraps main center content to exclude header and footer nav
     by using a margin in between (no overlap)*/
 
@@ -23,16 +24,21 @@ body {
     padding: 10px;
 }
 
-.navbars{
 
-    padding: 25px;
+.headers{
+    text-align: center;
 
 }
 
-.navbar{
+.mainQuote{
+    text-align: center;
+}
 
+.emergency{
+    width: 50px;
+    background-color: red;
+}
 
-    display: flex;
-    align-items: center;
-
+#map_canvas{
+    height: 150px;
 }
