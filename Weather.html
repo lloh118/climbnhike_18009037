@@ -17,7 +17,7 @@
           integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
           crossorigin=""/>
 
-    <!-- Custom CSS -->
+    <!-- Custom CSS/JS -->
     <link rel="stylesheet" href="css/styles.css">
 
 
@@ -47,13 +47,13 @@
     <div class="mainContent">
 
         <div class="segmented-control">
-            <a class="control-item active" href="data.html">
+            <a class="control-item" href="data.html">
                 Location
             </a>
             <a class="control-item" href="Timing.html">
                 Timing
             </a>
-            <a class="control-item" href="Weather.html">
+            <a class="control-item active" href="Weather.html">
                 Weather
             </a>
         </div>
@@ -62,15 +62,18 @@
 
         </div>
 
+        <form class="timerinput">
+            <label for="timer">Estimated activity time:</label>
+            <!-- data clear button is small x to clear input (ios has clear on time input popup anyway-->
+            <input type="time" data-clear-btn="false" name="timer" id="timer" value="">
+        </form>
 
-
-
+        <button onclick="getLocation()">Get current location</button>
 
         <div class="location">
 
         </div>
 
-        <button onclick="getLocation()">Get current location</button>
 
 
         <nav class="bar bar-tab">

@@ -11,8 +11,8 @@
     <description>
         A PhoneGap application giving Climbers and Hikers a host of virtual aids and tools.
     </description>
-	
-	<!-- app icons (IOS) -->
+
+    <!-- app icons (IOS) -->
     <platform name="ios">
         <icon src="media/appIcons/icon/ios/icon-1024.png" width="1024" height="1024"/>
         <icon src="media/appIcons/icon/ios/icon-small.png" width="29" height="29"/>
@@ -52,17 +52,17 @@
     </author>
 
     <preference name="phonegap-version" value="cli-7.0.1" />
-	
-    <preference name="permissions"                value="none"/>  
-	
-	<!-- plugins -->
-    <!-- allow navigation to any off app urls not just file links-->
+
+    <preference name="permissions"                value="none"/>
+
+    <!-- plugins -->
+    <!-- allow navigation to any off app urls not just file links, requested internet access -->
     <access origin="*"/>
     <!-- plugin for off app navigation-->
     <plugin name="cordova-plugin-whitelist" version="1" />
 
     <!-- google maps plugin -->
-    <!--<plugin name="plugin.google.maps.menusito" spec="1.2.5" source="pgb" />-->
+    <plugin name="plugin.google.maps.menusito" spec="1.2.5" source="pgb" />
     <!-- plugin to access device location -->
     <plugin name="cordova-plugin-geolocation" spec="~4.0.2" />
     <!-- allows battery level notification in app -->
@@ -71,5 +71,13 @@
     <plugin name="cordova-plugin-network-information" spec="~2.0.2" />
     <!-- allows use of splash loading screens-->
     <plugin name="cordova-plugin-splashscreen" spec="~5.0.4" />
+
+    <!-- IOS 10 and later user permission access -->
+    <config-file platform="ios" parent="NSLocationWhenInUseUsageDescription" mode="merge">
+        <array>
+            <key>NSLocationWhenInUseUsageDescription</key>
+            <string>Please allow location access for the app.</string>
+        </array>
+    </config-file>
 
 </widget>
