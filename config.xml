@@ -61,8 +61,7 @@
     <!-- plugin for off app navigation-->
     <plugin name="cordova-plugin-whitelist" version="1" />
 
-    <!-- google maps plugin -->
-    <plugin name="plugin.google.maps.menusito" spec="1.2.5" source="pgb" />
+
     <!-- plugin to access device location -->
     <plugin name="cordova-plugin-geolocation" spec="~4.0.2" />
     <!-- allows battery level notification in app -->
