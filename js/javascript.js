@@ -94,7 +94,7 @@ function timesubmitted() {
     //test function has worked
     console.log(timeset);
     //Set timer in local storage for checking
-    localStorage.setItem("timeset", timeset);
+    window.localStorage.setItem("timeset", timeset);
 
     console.log(timeNow);
     alert("Timer has been set")
@@ -116,7 +116,7 @@ var myTimeCheck = setInterval(function(){
     //TEST
     console.log("Time now is: " + timeNow);
     //Check if time set is equal to time now
-    if (localStorage.getItem("timeset") === timeNow) {
+    if (window.localStorage.getItem("timeset") === timeNow) {
         alert("Time set, is up! code amber sent to server,");
         //Stop cycle of checking time
         clearInterval(myTimeCheck);
