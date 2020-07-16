@@ -1,0 +1,44 @@
+
+
+/*Height set to 100% and overflow hidden to stop scrolling, all content will be shown on one full screen,
+    additional content will "slide out' with use of ratchet push elements*/
+
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+
+
+/* Div wraps main center content to exclude header and footer nav
+    by using a margin in between (no overlap)*/
+
+.mainContent{
+    margin-top: 50px;
+}
+
+.timerinput{
+    padding: 10px;
+}
+
+
+.headers{
+    text-align: center;
+
+}
+
+.mainQuote{
+    text-align: center;
+}
+
+.emergency{
+    width: 50px;
+    background-color: red;
+}
+
+#map_canvas{
+    height: 150px;
+}
