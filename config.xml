@@ -51,9 +51,6 @@
         18009037 - Student
     </author>
 
-    <preference name="phonegap-version" value="cli-7.0.1" />
-
-    <preference name="permissions"                value="none"/>
 
     <!-- plugins -->
     <!-- allow navigation to any off app urls not just file links, requested internet access -->
@@ -78,5 +75,9 @@
             <string>Please allow location access for the app.</string>
         </array>
     </config-file>
+
+    <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+        <string>Please allow location access for maps.</string>
+    </edit-config>
 
 </widget>
