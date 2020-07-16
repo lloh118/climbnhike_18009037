@@ -77,6 +77,56 @@ function failPosition(error) {
 
 }
 
+//  TRANSITIONS
+//On document load change default page transition to 'flow' to save coding each, just code for reverse transitions
+$(document).bind("mobileinit", function() {
+    $.mobile.defaultPageTransition = "flow"   // flip is the default transition effect
+});
+
+// TIMER
+//intitialize variables not equal
+var timeset = 0;
+var timeNow = 1;
+
+function timesubmitted() {
+
+    var timeset = document.getElementById("timer").value;
+    //test function has worked
+    console.log(timeset);
+    //Set timer in local storage for checking
+    localStorage.setItem("timeset", timeset);
+
+    console.log(timeNow);
+    alert("Timer has been set")
+
+
+}
+
+function cleartimer() {
+    clearInterval(myTimeCheck);
+    alert("Timer Cleared")
+}
+
+//Check time if timeset = timeNow ever 60seconds
+var myTimeCheck = setInterval(function(){
+    //first get the date object
+    var today = new Date();
+    //check current time (update)
+    var timeNow = today.getHours() + ":" + (today.getMinutes()<10?'0':'') + today.getMinutes();
+    //TEST
+    console.log("Time now is: " + timeNow);
+    //Check if time set is equal to time now
+    if (localStorage.getItem("timeset") === timeNow) {
+        alert("Time set, is up! code amber sent to server,");
+        //Stop cycle of checking time
+        clearInterval(myTimeCheck);
+    }
+    else {
+        console.log("ITS NOT TIME YET!")
+    }
+     }, 3000);
+
+
 //MAP PAGE SECTION
 
 
@@ -84,10 +134,7 @@ function onMapInit(map) {
     // You can use another methods from here.
 }
 
-//On document load change default page transition to 'flow' to save coding each, just code for reverse transitions
-$(document).bind("mobileinit", function() {
-    $.mobile.defaultPageTransition = "flow"   // flip is the default transition effect
-});
+
 
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
