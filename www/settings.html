@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+    <!-- Make sure user can't pinch to zoom and is full device size -->
+    <meta name="viewport" content= "width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, maximum-scale=1">
+
+    <!-- jQuery stylesheet -->
+    <link href="jquery-mobile/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+
+    <!-- ratchet stylesheet -->
+    <link rel="stylesheet" href="css/ratchet.min.css">
+    <!-- IOS Version CSS -->
+    <link rel="stylesheet" href="css/ratchet-theme-ios.min.css">
+    <!-- Leaflet MAP Stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
+
+    <!-- Custom CSS/JS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+
+    <!-- jquery JS links -->
+    <script src="jquery-mobile/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="jquery-mobile/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+
+    <!-- ratchet JS files -->
+    <script src="js/ratchet.js"></script>
+    <script src="js/ratchet.min.js"></script>
+
+    <!-- MAP JS -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin=""></script>
+
+    <!-- custom JS file -->
+    <script src="js/javascript.js"></script>
+
+</head>
+
+<body>
+    <header class="bar bar-nav">
+        <h1 class="title">Settings</h1>
+    </header>
+
+    <div class="mainContent">
+
+    <ul class="table-view">
+        <li class="table-view-cell table-view-cell"><a href="index.html" class="navigate-right">Home</a></li>
+
+        <li class="table-view-cell table-view-cell"><a href="map.html" class="navigate-right">Map</a></li>
+
+        <li class="table-view-cell table-view-cell"><a href="index.html" class="navigate-right">Home</a></li>
+    </ul>
+
+
+
+
+    <nav class="bar bar-tab">
+        <a class="tab-item" href="index.html" data-transition="flow" data-direction="reverse" >
+            <span class="icon icon-home"></span>
+            <span class="tab-label">Home</span>
+        </a>
+        <a class="tab-item" href="socials.html" data-transition="flow" data-direction="reverse">
+            <span class="icon icon-person"></span>
+            <span class="tab-label">Social</span>
+        </a>
+        <a class="tab-item" href="map.html" data-transition="flow" data-direction="reverse">
+            <span class="icon icon-pages"></span>
+            <span class="tab-label">Maps</span>
+        </a>
+        <a class="tab-item" href="data.html" data-transition="flow" data-direction="reverse">
+            <span class="icon icon-info"></span>
+            <span class="tab-label">Data</span>
+        </a>
+        <a class="tab-item active" href="settings.html" >
+            <span class="icon icon-gear"></span>
+            <span class="tab-label">Settings</span>
+        </a>
+    </nav>
+    </div>
+</body>
+</html>
