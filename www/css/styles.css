@@ -42,3 +42,7 @@ body {
 #map_canvas{
     height: 150px;
 }
+
+#locUpdate{
+    padding: 10px;
+}
