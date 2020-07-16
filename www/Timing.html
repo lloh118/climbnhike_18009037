@@ -69,12 +69,14 @@
 
         </div>
 
-        <form class="timerinput">
-            <label for="timer">Estimated activity time:</label>
+        <form class="timerinput" onsubmit=timesubmitted()>
+            <label for="timer">Estimated activity time end:</label>
             <!-- data clear button is small x to clear input (ios has clear on time input popup anyway-->
-            <input type="time" data-clear-btn="false" name="timer" id="timer" value="">
+            <input  type="time" data-clear-btn="false" name="timer" id="timer" value="">
+            <input type="submit" value="Submit">
         </form>
-
+        <label id="finishedLabel" for="finished">Click here to clear the timer when you have finished safely</label>
+        <button id="finished" class="btn" onclick="cleartimer()">FINISHED</button>
 
 
 
